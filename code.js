@@ -11,6 +11,8 @@ backgroundDiv.className = "electrPiContainer";
 
 var iframe = document.createElement("iframe");
 iframe.className = "electrPiDiv_iframe";
+console.log("hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh");
+console.log(projectId);
 iframe.src="http://localhost:3100/"+projectId
 
 
