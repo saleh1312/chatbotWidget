@@ -1,3 +1,6 @@
+
+var projectId = document.getElementById("electroPiDivChatBot").getAttribute("projectId");
+
 var backgroundDiv = document.createElement("div");
 backgroundDiv.className = "electrPiDiv";
 
@@ -8,7 +11,7 @@ backgroundDiv.className = "electrPiContainer";
 
 var iframe = document.createElement("iframe");
 iframe.className = "electrPiDiv_iframe";
-iframe.src="http://localhost:3100/login/639ba58c30d557ff89300e6a"
+iframe.src="http://localhost:3100/"+projectId
 
 
 var buttoncontainer = document.createElement("div");
