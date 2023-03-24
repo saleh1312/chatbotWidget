@@ -1,0 +1,8 @@
+https://cdn.jsdelivr.net/gh/saleh1312/chatbotWidget/code.js
+
+
+
+https://cdn.jsdelivr.net/gh/saleh1312/chatbotWidget/style.css
+
+
+https://cdn.jsdelivr.net/gh/saleh1312/chatbotWidget/icon.png
