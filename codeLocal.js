@@ -14,6 +14,10 @@ iframe.className = "electrPiDiv_iframe";
 console.log("hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh");
 console.log(projectId);
 iframe.src="http://localhost:3100/"+projectId
+iframe.style.height="80%"
+iframe.style.width="30%"
+
+
 
 
 var buttoncontainer = document.createElement("div");
