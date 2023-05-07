@@ -53,6 +53,7 @@ button.className = "electrPi_img";
 button.setAttribute('src','https://cdn.jsdelivr.net/gh/saleh1312/chatbotWidget@9e49896/icon.png');
 button.setAttribute('width','85');
 button.setAttribute('height','85');
+button.setAttribute('alt','electropi_chatbot_logo');
 
 
 ////////////////////////////////////// adding elements
