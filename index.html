@@ -65,9 +65,26 @@
 
         var button = document.createElement("img");
         button.className = "electrPi_img";
-        button.setAttribute('src','https://cdn-icons-png.flaticon.com/512/4616/4616759.png');
+        button.setAttribute('src','./speech-bubble.png');
         button.setAttribute('width','85');
         button.setAttribute('height','85');
+
+        /*
+        const button = document.createElement("button");
+        button.className = "electrPi_button";
+
+        const icon = document.createElement("i");
+        icon.className = "fa fa-comment";
+
+        button.appendChild(icon);
+        button.addEventListener("mouseover", () => {
+        icon.style.animation = "bounce 0.5s ease-in-out infinite alternate";
+        });
+
+        button.addEventListener("mouseout", () => {
+        icon.style.animation = "none";
+        });
+        */
 
 
         ////////////////////////////////////// adding elements

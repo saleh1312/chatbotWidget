@@ -51,7 +51,7 @@ buttoncontainer.onclick=function(){
 
 var button = document.createElement("img");
 button.className = "electrPi_img";
-button.setAttribute('src','https://cdn.jsdelivr.net/gh/saleh1312/chatbotWidget@9e49896/icon.png');
+button.setAttribute('src','./speech-bubble.png');
 button.setAttribute('width','85');
 button.setAttribute('height','85');
 
