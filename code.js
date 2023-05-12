@@ -10,7 +10,7 @@ backgroundDiv.className = "electrPiContainer";
 
 
 var iframe = document.createElement("iframe");
-iframe.className = "electrPiDiv_iframe";
+iframe.className = "electrPiDiv_iframe closeiframe";
 console.log("hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh");
 console.log(projectId);
 iframe.src="https://electropi.ai:3100/"+projectId
@@ -35,24 +35,25 @@ function getCSS(element) {
     return css_result;
 }
 
-buttoncontainer.onclick=function(){
-    var iframee = document.getElementsByClassName("electrPiDiv_iframe")[0];
-    var frame_styel=getCSS(iframee)
-    if(frame_styel.display!=="block"){
+// buttoncontainer.onclick=function(){
+//     var iframee = document.getElementsByClassName("electrPiDiv_iframe ")[0];
+//     var frame_styel=getCSS(iframee)
+//     if(frame_styel.display!=="block"){
 
-        iframee.style.display="block"
+//         iframee.style.display="block"
 
-    }else{
+//     }else{
 
-        iframee.style.display="none"
-    }
-}
+//         iframee.style.display="none"
+//     }
+// }
 
 var button = document.createElement("img");
         button.classList.add('electrPi_img');
         button.addEventListener('click', () => {
             button.classList.toggle('clicked');
             button_close.classList.toggle('clicked');
+            iframe.classList.remove("closeiframe")
         });
         button.className = "electrPi_img";
         button.setAttribute('src','https://cdn.jsdelivr.net/gh/saleh1312/chatbotWidget@d5f9e36/speech-bubble.png');
@@ -65,6 +66,7 @@ var button = document.createElement("img");
         button_close.addEventListener('click', () => {
             button.classList.remove('clicked');
             button_close.classList.remove('clicked');
+            iframe.classList.toggle("closeiframe")
         });
         button_close.className = "electrPi_img_close";
         button_close.setAttribute('src','https://cdn.jsdelivr.net/gh/saleh1312/chatbotWidget@d5f9e36/cross.png');
