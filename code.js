@@ -14,9 +14,9 @@ iframe.className = "electrPiDiv_iframe closeiframe";
 console.log("hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh");
 console.log(projectId);
 iframe.src="https://electropi.ai:3100/"+projectId
-iframe.style.display="none"
-iframe.style.height="80%"
-iframe.style.width="30%"
+// iframe.style.display="none"
+// iframe.style.height="80%"
+// iframe.style.width="30%"
 
 
 var buttoncontainer = document.createElement("div");
