@@ -38,9 +38,9 @@
     right: 20px;
     opacity: 0;
     transform: translateY(50px);
-    animation: slide-up 0.5s ease-in-out forwards;
-    /* background-color: black; */
+    animation: slide-up 1s ease-in-out forwards;
 }
+
 @keyframes slide-up {
   from {
     opacity: 0;
@@ -51,6 +51,26 @@
     transform: translateY(0);
   }
 }
+
+.electrPiDiv_iframe.closeiframe{
+  /* display: none !important; */
+  opacity: 1;
+  transform: translateY(0);
+  animation: slide-down 1s ease-in-out forwards;
+}
+
+@keyframes slide-down {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+}
+
+
 
 .electrPi_buttoncontainer {
     position: fixed;
