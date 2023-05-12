@@ -43,8 +43,8 @@
     position: fixed;
     /* background-color: transparent; */
     background-color: white;
-    width: 40px;
-    height: 40px;
+    width: 50px;
+    height: 50px;
     border-radius: 50%;
     display: flex;
     flex-direction: row;
@@ -80,10 +80,11 @@
     height: 100%;
     transition: transform 0.2s ease-in-out;
     display: none;
+    transform: scale(1.1);
     
   }
   .electrPi_img_close:hover{
-    transform: scale(1.2);
+    transform: scale(1.2) !important;
   }
 
   .electrPi_img_close.clicked{
