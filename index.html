@@ -29,8 +29,7 @@
         iframe.className = "electrPiDiv_iframe";
         iframe.src="http://localhost:3100/"+"639ba58c30d557ff89300e6a"
         iframe.style.display="none"
-        iframe.style.height="80%"
-        iframe.style.width="30%"
+       
 
         
        
@@ -64,10 +63,27 @@
         }
 
         var button = document.createElement("img");
+        button.classList.add('electrPi_img');
+        button.addEventListener('click', () => {
+            button.classList.toggle('clicked');
+            button_close.classList.toggle('clicked');
+        });
         button.className = "electrPi_img";
         button.setAttribute('src','./speech-bubble.png');
         button.setAttribute('width','85');
         button.setAttribute('height','85');
+
+
+        var button_close = document.createElement("img");
+        button_close.classList.add('electrPi_img_close');
+        button_close.addEventListener('click', () => {
+            button.classList.remove('clicked');
+            button_close.classList.remove('clicked');
+        });
+        button_close.className = "electrPi_img_close";
+        button_close.setAttribute('src','./cross.png');
+        button_close.setAttribute('width','85');
+        button_close.setAttribute('height','85');
 
         /*
         const button = document.createElement("button");
@@ -89,6 +105,7 @@
 
         ////////////////////////////////////// adding elements
         buttoncontainer.appendChild(button);
+        buttoncontainer.appendChild(button_close);
         container.appendChild(iframe);
         container.appendChild(buttoncontainer);
         backgroundDiv.appendChild(container);
