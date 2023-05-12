@@ -50,14 +50,32 @@ buttoncontainer.onclick=function(){
 }
 
 var button = document.createElement("img");
-button.className = "electrPi_img";
-button.setAttribute('src','./speech-bubble.png');
-button.setAttribute('width','85');
-button.setAttribute('height','85');
+        button.classList.add('electrPi_img');
+        button.addEventListener('click', () => {
+            button.classList.toggle('clicked');
+            button_close.classList.toggle('clicked');
+        });
+        button.className = "electrPi_img";
+        button.setAttribute('src','https://cdn.jsdelivr.net/gh/saleh1312/chatbotWidget@db4abed/speech-bubble.png');
+        button.setAttribute('width','85');
+        button.setAttribute('height','85');
+
+
+        var button_close = document.createElement("img");
+        button_close.classList.add('electrPi_img_close');
+        button_close.addEventListener('click', () => {
+            button.classList.remove('clicked');
+            button_close.classList.remove('clicked');
+        });
+        button_close.className = "electrPi_img_close";
+        button_close.setAttribute('src','https://cdn.jsdelivr.net/gh/saleh1312/chatbotWidget@db4abed/cross.png');
+        button_close.setAttribute('width','85');
+        button_close.setAttribute('height','85');
 
 
 ////////////////////////////////////// adding elements
 buttoncontainer.appendChild(button);
+buttoncontainer.appendChild(button_close);
 container.appendChild(iframe);
 container.appendChild(buttoncontainer);
 backgroundDiv.appendChild(container);
