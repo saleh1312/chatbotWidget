@@ -71,7 +71,10 @@
         button.classList.add('electrPi_img');
         button.addEventListener('click', () => {
             button.classList.toggle('clicked');
-            button_close.classList.toggle('clicked'); 
+            //button_close.classList.toggle('clicked');
+            setTimeout(function() {
+                button_close.classList.toggle('clicked');
+            }, 300); 
             iframe.classList.remove("closeiframe")
 
         });

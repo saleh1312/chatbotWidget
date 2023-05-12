@@ -121,13 +121,23 @@
   }
 
   .electrPi_img_close.clicked{
-    /* .electrPi_img{
-        display: none;
-    } */
     display: flex;
-    
-    
   }
+    /* opacity: 0;
+    animation: appear 1s ease-in-out forwards;
+    }
+    @keyframes appear {
+      from {
+        opacity: 0;
+        transform: scale(1);
+      }
+      to {
+        opacity: 1;
+        transform: scale(1.3)s;
+      }
+    } */
+
+
 
   @media screen and (max-width: 500px) {
     .electrPiDiv_iframe {
@@ -146,6 +156,69 @@
       transform: translateY(50px);
       animation: slide-up 1s ease-in-out forwards;
   }
+
+  .electrPi_buttoncontainer {
+    position: fixed;
+    /* background-color: transparent; */
+    background-color: transparent !important; 
+    width: 50px;
+    height: 50px;
+    /* border-radius: 50%; */
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    /* padding: 10px; */
+    z-index: 1000;
+    pointer-events: auto;
+    bottom: 50px;
+    right: 50px;
+    cursor: pointer;
+    /* border: 0px !important; */
+    color: blue;
+}
+
+  .electrPi_img_close.clicked{
+    position: fixed;
+    width: 40px;
+    height: 40px;
+    top: 10px;
+    right: 20px;
+    display: flex;
+  opacity: 0;
+  transform: translateY(100px);
+  animation: appear 1s ease-in-out forwards;
+  }
+  @keyframes appear {
+    from {
+      opacity: 0;
+      transform: translateY(15px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+ 
+  .electrPi_img{
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    animation: disappear 1s ease-in-out forwards;
+}
+
+  @keyframes disappear {
+    from {
+      opacity: 0;
+      transform: translateY(0px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(15px);
+    }
+  }
+
 
   }
 
