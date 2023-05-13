@@ -207,13 +207,14 @@
     opacity: 0;
     width: 100%;
     height: 100%;
+    transition: transform 0.2s ease-in-out;
     animation: disappear 1s ease-in-out forwards;
 }
 
   @keyframes disappear {
     from {
       opacity: 0;
-      transform: translateY(0px);
+      transform: translateY(0px) ;
     }
     to {
       opacity: 1;
