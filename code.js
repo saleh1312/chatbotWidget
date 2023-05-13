@@ -56,7 +56,7 @@ var button = document.createElement("img");
             iframe.classList.remove("closeiframe")
         });
         button.className = "electrPi_img";
-        button.setAttribute('src','https://cdn.jsdelivr.net/gh/saleh1312/chatbotWidget@d5f9e36/speech-bubble.png');
+        button.setAttribute('src','https://cdn.jsdelivr.net/gh/saleh1312/chatbotWidget@d5f9e36/speech-bubble-blue.png');
         button.setAttribute('width','85');
         button.setAttribute('height','85');
 
@@ -69,7 +69,7 @@ var button = document.createElement("img");
             iframe.classList.toggle("closeiframe")
         });
         button_close.className = "electrPi_img_close";
-        button_close.setAttribute('src','https://cdn.jsdelivr.net/gh/saleh1312/chatbotWidget@d5f9e36/cross.png');
+        button_close.setAttribute('src','https://cdn.jsdelivr.net/gh/saleh1312/chatbotWidget@d5f9e36/cancel_blue.png');
         button_close.setAttribute('width','85');
         button_close.setAttribute('height','85');
 
