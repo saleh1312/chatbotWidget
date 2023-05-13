@@ -26,7 +26,7 @@
 
 
         var iframe = document.createElement("iframe");
-        iframe.className = "electrPiDiv_iframe closeiframe";
+        iframe.className = "electrPiDiv_iframe start";
         iframe.src="http://localhost:3100/"+"639ba58c30d557ff89300e6a"
         //iframe.style.display="none"
        
@@ -75,11 +75,12 @@
             setTimeout(function() {
                 button_close.classList.toggle('clicked');
             }, 300); 
+            iframe.classList.remove("start")
             iframe.classList.remove("closeiframe")
 
         });
         button.className = "electrPi_img";
-        button.setAttribute('src','https://cdn.jsdelivr.net/gh/saleh1312/chatbotWidget@8cc2038/speech-bubble-blue.png');
+        button.setAttribute('src','https://cdn.jsdelivr.net/gh/saleh1312/chatbotWidget@1af16ce/speech-bubble-blue.png');
         button.setAttribute('width','85');
         button.setAttribute('height','85');
 
@@ -92,7 +93,7 @@
             iframe.classList.toggle("closeiframe")
         });
         button_close.className = "electrPi_img_close";
-        button_close.setAttribute('src','https://cdn.jsdelivr.net/gh/saleh1312/chatbotWidget@8cc2038/cancel_blue.png');
+        button_close.setAttribute('src','https://cdn.jsdelivr.net/gh/saleh1312/chatbotWidget@1af16ce/close-removebg-preview.png');
         button_close.setAttribute('width','85');
         button_close.setAttribute('height','85');
 
