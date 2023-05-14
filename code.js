@@ -13,7 +13,7 @@ var iframe = document.createElement("iframe");
 iframe.className = "electrPiDiv_iframe start";
 console.log("hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh");
 console.log(projectId);
-iframe.src="https://electropi.ai:3100/"+projectId
+iframe.src = "https://electropi.ai:3100/" + projectId
 // iframe.style.display="none"
 // iframe.style.height="80%"
 // iframe.style.width="30%"
@@ -26,10 +26,10 @@ buttoncontainer.className = "electrPi_buttoncontainer";
 function getCSS(element) {
 
     var css_obj = getComputedStyle(element);
-    var css_result={}
+    var css_result = {}
 
     for (var i = 0; i < css_obj.length; i++) {
-        css_result[css_obj[i]]=css_obj.getPropertyValue(css_obj[i])
+        css_result[css_obj[i]] = css_obj.getPropertyValue(css_obj[i])
     }
     // console.log(css_result)
     return css_result;
@@ -49,31 +49,36 @@ function getCSS(element) {
 // }
 
 var button = document.createElement("img");
-        button.classList.add('electrPi_img');
-        button.addEventListener('click', () => {
-            button.classList.toggle('clicked');
-            button_close.classList.toggle('clicked');
-            iframe.classList.remove("start")
-            iframe.classList.remove("closeiframe")
-        });
-        button.className = "electrPi_img";
-        button.setAttribute('src','https://cdn.jsdelivr.net/gh/saleh1312/chatbotWidget@1af16ce/speech-bubble-blue.png');
-        button.setAttribute('width','85');
-        button.setAttribute('height','85');
+button.classList.add('electrPi_img');
+button.addEventListener('click', () => {
+    button.classList.toggle('clicked');
+    button_close.classList.toggle('clicked');
+    iframe.classList.remove("start")
+    iframe.classList.remove("closeiframe")
+});
+button.className = "electrPi_img";
+button.setAttribute('src', 'https://cdn.jsdelivr.net/gh/saleh1312/chatbotWidget@1af16ce/speech-bubble-blue.png');
+button.setAttribute('width', '85');
+button.setAttribute('height', '85');
+button.setAttribute('alt', 'electropi_open_button');
 
 
-        var button_close = document.createElement("img");
-        button_close.classList.add('electrPi_img_close');
-        button_close.addEventListener('click', () => {
-            button.classList.remove('clicked');
-            button_close.classList.remove('clicked');
-            iframe.classList.toggle("closeiframe")
-        });
-        button_close.className = "electrPi_img_close";
-        button_close.setAttribute('src','https://cdn.jsdelivr.net/gh/saleh1312/chatbotWidget@1af16ce/close-removebg-preview.png');
-        button_close.setAttribute('width','85');
-        button_close.setAttribute('height','85');
 
+
+
+
+var button_close = document.createElement("img");
+button_close.classList.add('electrPi_img_close');
+button_close.addEventListener('click', () => {
+    button.classList.remove('clicked');
+    button_close.classList.remove('clicked');
+    iframe.classList.toggle("closeiframe")
+});
+button_close.className = "electrPi_img_close";
+button_close.setAttribute('src', 'https://cdn.jsdelivr.net/gh/saleh1312/chatbotWidget@1af16ce/close-removebg-preview.png');
+button_close.setAttribute('width', '85');
+button_close.setAttribute('height', '85');
+button.setAttribute('alt', 'electropi_open_close');
 
 ////////////////////////////////////// adding elements
 buttoncontainer.appendChild(button);
