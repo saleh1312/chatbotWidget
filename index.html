@@ -29,7 +29,19 @@
         iframe.className = "electrPiDiv_iframe start";
         iframe.src="http://localhost:3100/"+"639ba58c30d557ff89300e6a"
         //iframe.style.display="none"
-       
+        
+        var iframe_msg = document.createElement("div");
+        iframe_msg.className = "electrPiDiv_iframe_msg";
+        iframe_msg.innerHTML = " أهلا بك. كيف يمكنني مساعدتك؟";
+        
+        var close_button = document.createElement("button");
+        close_button.className="closemsgbutton"
+        close_button.innerHTML = "X";
+        close_button.addEventListener("click", function() {
+          iframe_msg.style.display = "none";
+        });
+        
+        iframe_msg.appendChild(close_button);
 
         
        
@@ -78,6 +90,8 @@
             iframe.classList.remove("start")
             iframe.classList.remove("closeiframe")
             iframe.classList.toggle("openiframe")
+            iframe_msg.classList.toggle("close")
+
 
         });
         button.className = "electrPi_img";
@@ -93,6 +107,7 @@
             button_close.classList.remove('clicked');
             iframe.classList.remove("openiframe")
             iframe.classList.toggle("closeiframe")
+            iframe_msg.classList.remove("close")
         
         });
         button_close.className = "electrPi_img_close";
@@ -122,6 +137,7 @@
         buttoncontainer.appendChild(button);
         buttoncontainer.appendChild(button_close);
         container.appendChild(iframe);
+        container.appendChild(iframe_msg);
         container.appendChild(buttoncontainer);
         backgroundDiv.appendChild(container);
         document.body.appendChild(backgroundDiv);

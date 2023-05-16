@@ -18,6 +18,17 @@ iframe.src = "https://electropi.ai:3100/" + projectId
 // iframe.style.height="80%"
 // iframe.style.width="30%"
 
+var iframe_msg = document.createElement("div");
+iframe_msg.className = "electrPiDiv_iframe_msg";
+iframe_msg.innerHTML = " أهلا بك. كيف يمكنني مساعدتك؟";
+
+var close_button = document.createElement("button");
+close_button.className="closemsgbutton"
+close_button.innerHTML = "X";
+close_button.addEventListener("click", function() {
+    iframe_msg.style.display = "none";
+});
+
 
 var buttoncontainer = document.createElement("div");
 buttoncontainer.className = "electrPi_buttoncontainer";
@@ -51,10 +62,21 @@ function getCSS(element) {
 var button = document.createElement("img");
 button.classList.add('electrPi_img');
 button.addEventListener('click', () => {
+    // button.classList.toggle('clicked');
+    // button_close.classList.toggle('clicked');
+    // iframe.classList.remove("start")
+    // iframe.classList.remove("closeiframe")
+
     button.classList.toggle('clicked');
-    button_close.classList.toggle('clicked');
+    setTimeout(function() {
+        button_close.classList.toggle('clicked');
+    }, 300); 
     iframe.classList.remove("start")
     iframe.classList.remove("closeiframe")
+    iframe.classList.toggle("openiframe")
+    iframe_msg.classList.toggle("close")
+
+
 });
 button.className = "electrPi_img";
 button.setAttribute('src', 'https://cdn.jsdelivr.net/gh/saleh1312/chatbotWidget@1af16ce/speech-bubble-blue.png');
@@ -72,7 +94,12 @@ button_close.classList.add('electrPi_img_close');
 button_close.addEventListener('click', () => {
     button.classList.remove('clicked');
     button_close.classList.remove('clicked');
+    iframe.classList.remove("openiframe")
     iframe.classList.toggle("closeiframe")
+    iframe_msg.classList.remove("close")
+
+
+    
 });
 button_close.className = "electrPi_img_close";
 button_close.setAttribute('src', 'https://cdn.jsdelivr.net/gh/saleh1312/chatbotWidget@1af16ce/close-removebg-preview.png');
@@ -84,6 +111,7 @@ button.setAttribute('alt', 'electropi_open_close');
 buttoncontainer.appendChild(button);
 buttoncontainer.appendChild(button_close);
 container.appendChild(iframe);
+container.appendChild(iframe_msg);
 container.appendChild(buttoncontainer);
 backgroundDiv.appendChild(container);
 document.body.appendChild(backgroundDiv);

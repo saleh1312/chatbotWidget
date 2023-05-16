@@ -40,6 +40,39 @@
     transform: translateY(50px);
     animation: slide-up 1s ease-in-out forwards;
 }
+.electrPiDiv_iframe_msg{
+   box-shadow: 0px 15px 20px rgb(0 0 0 / 10%);
+    position: fixed;
+    border-radius: 30px;
+    width: 200px;
+    /* height: 20%; */
+    z-index: 1000;
+    pointer-events: auto;
+    padding: 10px;
+    bottom: 110px;
+    right: 20px;
+    opacity: 1;
+    display: flex;
+    justify-content: center;
+    font-weight: 100;
+    background-color: #16aff7;
+    transform: translateY(50px);
+    animation: slide-up 1s ease-in-out forwards;
+    color:white
+   
+}
+.electrPiDiv_iframe_msg.close{
+  display: none;
+  
+}
+.closemsgbutton{
+  background-color: #416efa;
+  border: 1px solid #416efa;
+  border-radius: 50%;
+  top:-15px;
+  left:0px;
+  position: fixed;
+}
 
 .electrPiDiv_iframe.openiframe{
   display: block;
