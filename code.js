@@ -69,9 +69,10 @@ button.addEventListener('click', () => {
     // iframe.classList.remove("closeiframe")
 
     button.classList.toggle('clicked');
-    setTimeout(function() {
-        button_close.classList.toggle('clicked');
-    }, 300); 
+    button_close.classList.toggle('clicked');
+    // setTimeout(function() {
+    //     button_close.classList.toggle('clicked');
+    // }, 300); 
     iframe.classList.remove("start")
     iframe.classList.remove("closeiframe")
     iframe.classList.toggle("openiframe")
