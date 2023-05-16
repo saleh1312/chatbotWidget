@@ -29,6 +29,7 @@ close_button.addEventListener("click", function() {
     iframe_msg.style.display = "none";
 });
 
+iframe_msg.appendChild(close_button);
 
 var buttoncontainer = document.createElement("div");
 buttoncontainer.className = "electrPi_buttoncontainer";
