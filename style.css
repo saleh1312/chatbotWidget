@@ -49,7 +49,7 @@
     z-index: 1000;
     pointer-events: auto;
     padding: 10px;
-    bottom: 110px;
+    bottom: 125px;
     right: 20px;
     opacity: 1;
     display: flex;
@@ -72,6 +72,9 @@
   top:-15px;
   left:0px;
   position: fixed;
+  color: white;
+  width: 25px;
+  height: 25px;
 }
 
 .electrPiDiv_iframe.openiframe{
@@ -135,8 +138,8 @@
     position: fixed;
     /* background-color: transparent; */
     /* background-color: white; */
-    width: 50px;
-    height: 50px;
+    width: 65px;
+    height: 65px;
     border-radius: 50%;
     display: flex;
     flex-direction: row;
@@ -168,8 +171,8 @@
 
   }
   .electrPi_img_close{
-    width: 55px;
-    height: 50px;
+    width: 75px;
+    height: 65px;
     transition: transform 0.2s ease-in-out;
     display: none;
     /* transform: scale(1.1); */
@@ -215,6 +218,28 @@
       transform: translateY(50px);
       animation: slide-up 1s ease-in-out forwards;
   }
+  
+  .electrPiDiv_iframe_msg{
+    box-shadow: 0px 15px 20px rgb(0 0 0 / 10%);
+     position: fixed;
+     border-radius: 30px;
+     width: 200px;
+     /* height: 20%; */
+     z-index: 1000;
+     pointer-events: auto;
+     padding: 10px;
+     bottom: 90px;
+     right: 20px;
+     opacity: 1;
+     display: flex;
+     justify-content: center;
+     font-weight: 100;
+     background-color: #16aff7;
+     transform: translateY(50px);
+     animation: slide-up 1s ease-in-out forwards;
+     color:white
+    
+ }
 
   .electrPi_buttoncontainer {
     position: fixed;
