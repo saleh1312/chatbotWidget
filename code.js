@@ -11,8 +11,6 @@ backgroundDiv.className = "electrPiContainer";
 
 var iframe = document.createElement("iframe");
 iframe.className = "electrPiDiv_iframe start";
-console.log("hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh");
-console.log(projectId);
 iframe.src = "https://electropi.ai:3100/" + projectId
 // iframe.style.display="none"
 // iframe.style.height="80%"
@@ -43,7 +41,6 @@ function getCSS(element) {
     for (var i = 0; i < css_obj.length; i++) {
         css_result[css_obj[i]] = css_obj.getPropertyValue(css_obj[i])
     }
-    // console.log(css_result)
     return css_result;
 }
 
