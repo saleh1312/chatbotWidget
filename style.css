@@ -30,8 +30,8 @@
     border: 0px !important;
     box-shadow: 0px 15px 20px rgb(0 0 0 / 10%);
     position: fixed;
-    width: 500px !important;
-    height: 83% !important;
+    width: 500px ;
+    height: 83% ;
     z-index: 999999;
     pointer-events: auto;
     bottom: 110px;
